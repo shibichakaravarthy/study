@@ -1,0 +1,31 @@
+---
+client1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.3
+client2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.6
+r1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.4
+r2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.2
+r3:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.5
+r4:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.7
