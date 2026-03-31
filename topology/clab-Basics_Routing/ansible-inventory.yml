@@ -10,12 +10,12 @@ all:
         clab-Basics_Routing-client1:
           ansible_host: 172.20.20.3
         clab-Basics_Routing-client2:
-          ansible_host: 172.20.20.6
-        clab-Basics_Routing-r1:
-          ansible_host: 172.20.20.4
-        clab-Basics_Routing-r2:
-          ansible_host: 172.20.20.2
-        clab-Basics_Routing-r3:
           ansible_host: 172.20.20.5
+        clab-Basics_Routing-r1:
+          ansible_host: 172.20.20.2
+        clab-Basics_Routing-r2:
+          ansible_host: 172.20.20.6
+        clab-Basics_Routing-r3:
+          ansible_host: 172.20.20.4
         clab-Basics_Routing-r4:
           ansible_host: 172.20.20.7

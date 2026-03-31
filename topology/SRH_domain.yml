@@ -1,6 +1,11 @@
 name: Basics_Routing
 
 topology:
+  defaults:
+    sysctls:
+      net.ipv6.conf.all.forwarding: 1
+
+
   nodes:
 
     # =========================
@@ -9,29 +14,47 @@ topology:
     r1:
       kind: linux
       image: frrouting/frr:latest
-
+      binds:
+        - ../configs/r1.config:/etc/frr/frr.conf
+        - ../configs/daemons:/etc/frr/daemons
     r2:
       kind: linux
       image: frrouting/frr:latest
-
+      binds:
+        - ../configs/r2.config:/etc/frr/frr.conf
+        - ../configs/daemons:/etc/frr/daemons
     r3:
       kind: linux
       image: frrouting/frr:latest
-
+      binds:
+        - ../configs/r3.config:/etc/frr/frr.conf
+        - ../configs/daemons:/etc/frr/daemons
     r4:
       kind: linux
       image: frrouting/frr:latest
-
+      binds:
+        - ../configs/r4.config:/etc/frr/frr.conf
+        - ../configs/daemons:/etc/frr/daemons
     # =========================
     # Clients
     # =========================
     client1:
       kind: linux
       image: ubuntu:latest
+      exec:
+        - apt update
+        - apt install -y iproute2 iputils-ping
+        - ip addr add fc00:1::10/64 dev eth1
+        - ip link set eth1 up
 
     client2:
       kind: linux
       image: ubuntu:latest
+      exec:
+        - apt update
+        - apt install -y iproute2 iputils-ping
+        - ip addr add fc00:4::10/64 dev eth1
+        - ip link set eth1 up
 
   links:
 
