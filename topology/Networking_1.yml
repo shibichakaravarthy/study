@@ -35,26 +35,24 @@ topology:
       binds:
         - ../configs/r4.config:/etc/frr/frr.conf
         - ../configs/daemons:/etc/frr/daemons
+
     # =========================
     # Clients
     # =========================
-    client1:
+    shibi:
       kind: linux
-      image: ubuntu:latest
+      image: nicolaka/netshoot
       exec:
-        - apt update
-        - apt install -y iproute2 iputils-ping
-        - ip addr add fc00:1::10/64 dev eth1
+        - ip -6 addr add fc00:1::10/64 dev eth1
         - ip link set eth1 up
-
-    client2:
+        - ip -6 route add default via fc00:1::1
+    raja:
       kind: linux
-      image: ubuntu:latest
+      image: nicolaka/netshoot
       exec:
-        - apt update
-        - apt install -y iproute2 iputils-ping
-        - ip addr add fc00:4::10/64 dev eth1
+        - ip -6 addr add fc00:4::10/64 dev eth1
         - ip link set eth1 up
+        - ip -6 route add default via fc00:4::1
 
   links:
 
@@ -66,5 +64,5 @@ topology:
     - endpoints: ["r1:eth3", "r4:eth3"]
     - endpoints: ["r2:eth3", "r3:eth3"]
 
-    - endpoints: ["client1:eth1", "r1:eth4"]
-    - endpoints: ["client2:eth1", "r4:eth4"]
+    - endpoints: ["shibi:eth1", "r1:eth4"]
+    - endpoints: ["raja:eth1", "r4:eth4"]

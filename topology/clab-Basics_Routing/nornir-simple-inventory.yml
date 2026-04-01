@@ -1,31 +1,31 @@
 ---
-client1:
-    username: 
-    password: 
-    platform: linux
-    hostname: 172.20.20.3
-client2:
-    username: 
-    password: 
-    platform: linux
-    hostname: 172.20.20.5
 r1:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.2
+    hostname: 172.20.20.15
 r2:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.6
+    hostname: 172.20.20.18
 r3:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.4
+    hostname: 172.20.20.16
 r4:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.7
+    hostname: 172.20.20.19
+raja:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.20
+shibi:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.17
