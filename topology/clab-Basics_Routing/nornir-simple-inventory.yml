@@ -1,4 +1,9 @@
 ---
+jani:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.17
 r1:
     username: 
     password: 
@@ -8,18 +13,13 @@ r2:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.18
+    hostname: 172.20.20.16
 r3:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.16
-r4:
-    username: 
-    password: 
-    platform: linux
     hostname: 172.20.20.19
-raja:
+r4:
     username: 
     password: 
     platform: linux
@@ -28,4 +28,4 @@ shibi:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.17
+    hostname: 172.20.20.18

@@ -17,8 +17,39 @@
   },
   "ssh-pub-keys": [],
   "nodes": {
-    "r1": {
+    "jani": {
       "index": "0",
+      "shortname": "jani",
+      "longname": "clab-Basics_Routing-jani",
+      "fqdn": "jani.Basics_Routing.io",
+      "group": "",
+      "labdir": "/home/shibi/study/topology/clab-Basics_Routing/jani",
+      "kind": "linux",
+      "image": "nicolaka/netshoot",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.17",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::11",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-2309771512a3",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/shibi/study/topology/clab-Basics_Routing/jani",
+        "clab-node-longname": "clab-Basics_Routing-jani",
+        "clab-node-name": "jani",
+        "clab-node-type": "",
+        "clab-owner": "shibi",
+        "clab-topo-file": "/home/shibi/study/topology/Networking_1.yml",
+        "containerlab": "Basics_Routing"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r1": {
+      "index": "1",
       "shortname": "r1",
       "longname": "clab-Basics_Routing-r1",
       "fqdn": "r1.Basics_Routing.io",
@@ -49,7 +80,7 @@
       ]
     },
     "r2": {
-      "index": "1",
+      "index": "2",
       "shortname": "r2",
       "longname": "clab-Basics_Routing-r2",
       "fqdn": "r2.Basics_Routing.io",
@@ -59,9 +90,9 @@
       "image": "frrouting/frr:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.18",
+      "mgmt-ipv4-address": "172.20.20.16",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::12",
+      "mgmt-ipv6-address": "3fff:172:20:20::10",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
@@ -80,7 +111,7 @@
       ]
     },
     "r3": {
-      "index": "2",
+      "index": "3",
       "shortname": "r3",
       "longname": "clab-Basics_Routing-r3",
       "fqdn": "r3.Basics_Routing.io",
@@ -90,9 +121,9 @@
       "image": "frrouting/frr:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.16",
+      "mgmt-ipv4-address": "172.20.20.19",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::10",
+      "mgmt-ipv6-address": "3fff:172:20:20::13",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
@@ -111,7 +142,7 @@
       ]
     },
     "r4": {
-      "index": "3",
+      "index": "4",
       "shortname": "r4",
       "longname": "clab-Basics_Routing-r4",
       "fqdn": "r4.Basics_Routing.io",
@@ -119,37 +150,6 @@
       "labdir": "/home/shibi/study/topology/clab-Basics_Routing/r4",
       "kind": "linux",
       "image": "frrouting/frr:latest",
-      "mgmt-net": "",
-      "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.19",
-      "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::13",
-      "mgmt-ipv6-prefix-length": 64,
-      "mac-address": "",
-      "labels": {
-        "clab-mgmt-net-bridge": "br-2309771512a3",
-        "clab-node-group": "",
-        "clab-node-kind": "linux",
-        "clab-node-lab-dir": "/home/shibi/study/topology/clab-Basics_Routing/r4",
-        "clab-node-longname": "clab-Basics_Routing-r4",
-        "clab-node-name": "r4",
-        "clab-node-type": "",
-        "clab-owner": "shibi",
-        "clab-topo-file": "/home/shibi/study/topology/Networking_1.yml",
-        "containerlab": "Basics_Routing"
-      },
-      "port-bindings": [
-      ]
-    },
-    "raja": {
-      "index": "4",
-      "shortname": "raja",
-      "longname": "clab-Basics_Routing-raja",
-      "fqdn": "raja.Basics_Routing.io",
-      "group": "",
-      "labdir": "/home/shibi/study/topology/clab-Basics_Routing/raja",
-      "kind": "linux",
-      "image": "nicolaka/netshoot",
       "mgmt-net": "",
       "mgmt-intf": "",
       "mgmt-ipv4-address": "172.20.20.20",
@@ -161,9 +161,9 @@
         "clab-mgmt-net-bridge": "br-2309771512a3",
         "clab-node-group": "",
         "clab-node-kind": "linux",
-        "clab-node-lab-dir": "/home/shibi/study/topology/clab-Basics_Routing/raja",
-        "clab-node-longname": "clab-Basics_Routing-raja",
-        "clab-node-name": "raja",
+        "clab-node-lab-dir": "/home/shibi/study/topology/clab-Basics_Routing/r4",
+        "clab-node-longname": "clab-Basics_Routing-r4",
+        "clab-node-name": "r4",
         "clab-node-type": "",
         "clab-owner": "shibi",
         "clab-topo-file": "/home/shibi/study/topology/Networking_1.yml",
@@ -183,9 +183,9 @@
       "image": "nicolaka/netshoot",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.17",
+      "mgmt-ipv4-address": "172.20.20.18",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::11",
+      "mgmt-ipv6-address": "3fff:172:20:20::12",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
@@ -210,13 +210,13 @@
         "a": {
           "node": "r1",
           "interface": "eth1",
-          "mac": "aa:c1:ab:da:ec:75",
+          "mac": "aa:c1:ab:c5:19:4c",
           "peer": "z"
         },
         "z": {
           "node": "r2",
           "interface": "eth1",
-          "mac": "aa:c1:ab:4e:61:50",
+          "mac": "aa:c1:ab:80:d3:ef",
           "peer": "a"
         }
       }
@@ -226,13 +226,13 @@
         "a": {
           "node": "r2",
           "interface": "eth2",
-          "mac": "aa:c1:ab:5f:8d:57",
+          "mac": "aa:c1:ab:71:c8:1c",
           "peer": "z"
         },
         "z": {
           "node": "r4",
           "interface": "eth1",
-          "mac": "aa:c1:ab:4f:b0:60",
+          "mac": "aa:c1:ab:18:bf:cb",
           "peer": "a"
         }
       }
@@ -242,13 +242,13 @@
         "a": {
           "node": "r4",
           "interface": "eth2",
-          "mac": "aa:c1:ab:ca:4e:88",
+          "mac": "aa:c1:ab:2d:f2:ba",
           "peer": "z"
         },
         "z": {
           "node": "r3",
           "interface": "eth1",
-          "mac": "aa:c1:ab:8e:80:88",
+          "mac": "aa:c1:ab:5b:a4:bd",
           "peer": "a"
         }
       }
@@ -258,13 +258,13 @@
         "a": {
           "node": "r3",
           "interface": "eth2",
-          "mac": "aa:c1:ab:9a:8c:b8",
+          "mac": "aa:c1:ab:c0:67:46",
           "peer": "z"
         },
         "z": {
           "node": "r1",
           "interface": "eth2",
-          "mac": "aa:c1:ab:be:23:b9",
+          "mac": "aa:c1:ab:8f:72:82",
           "peer": "a"
         }
       }
@@ -274,13 +274,13 @@
         "a": {
           "node": "r1",
           "interface": "eth3",
-          "mac": "aa:c1:ab:bd:27:de",
+          "mac": "aa:c1:ab:8c:0b:95",
           "peer": "z"
         },
         "z": {
           "node": "r4",
           "interface": "eth3",
-          "mac": "aa:c1:ab:12:c8:91",
+          "mac": "aa:c1:ab:0c:31:60",
           "peer": "a"
         }
       }
@@ -290,13 +290,13 @@
         "a": {
           "node": "r2",
           "interface": "eth3",
-          "mac": "aa:c1:ab:68:f5:04",
+          "mac": "aa:c1:ab:d2:49:34",
           "peer": "z"
         },
         "z": {
           "node": "r3",
           "interface": "eth3",
-          "mac": "aa:c1:ab:a8:8e:5e",
+          "mac": "aa:c1:ab:fd:d7:52",
           "peer": "a"
         }
       }
@@ -306,13 +306,13 @@
         "a": {
           "node": "shibi",
           "interface": "eth1",
-          "mac": "aa:c1:ab:f8:9a:4a",
+          "mac": "aa:c1:ab:c8:f2:57",
           "peer": "z"
         },
         "z": {
           "node": "r1",
           "interface": "eth4",
-          "mac": "aa:c1:ab:19:db:5a",
+          "mac": "aa:c1:ab:53:65:d9",
           "peer": "a"
         }
       }
@@ -320,15 +320,15 @@
     {
       "endpoints": {
         "a": {
-          "node": "raja",
+          "node": "jani",
           "interface": "eth1",
-          "mac": "aa:c1:ab:16:35:a3",
+          "mac": "aa:c1:ab:bb:e1:8a",
           "peer": "z"
         },
         "z": {
           "node": "r4",
           "interface": "eth4",
-          "mac": "aa:c1:ab:f2:f4:21",
+          "mac": "aa:c1:ab:34:90:43",
           "peer": "a"
         }
       }

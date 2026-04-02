@@ -5,7 +5,6 @@ topology:
     sysctls:
       net.ipv6.conf.all.forwarding: 1
 
-
   nodes:
 
     # =========================
@@ -17,18 +16,21 @@ topology:
       binds:
         - ../configs/r1.config:/etc/frr/frr.conf
         - ../configs/daemons:/etc/frr/daemons
+
     r2:
       kind: linux
       image: frrouting/frr:latest
       binds:
         - ../configs/r2.config:/etc/frr/frr.conf
         - ../configs/daemons:/etc/frr/daemons
+
     r3:
       kind: linux
       image: frrouting/frr:latest
       binds:
         - ../configs/r3.config:/etc/frr/frr.conf
         - ../configs/daemons:/etc/frr/daemons
+
     r4:
       kind: linux
       image: frrouting/frr:latest
@@ -46,7 +48,11 @@ topology:
         - ip -6 addr add fc00:1::10/64 dev eth1
         - ip link set eth1 up
         - ip -6 route add default via fc00:1::1
-    raja:
+
+    # =========================
+    # Server
+    # =========================
+    jani:
       kind: linux
       image: nicolaka/netshoot
       exec:
@@ -56,6 +62,9 @@ topology:
 
   links:
 
+    # =========================
+    # Core Router Mesh
+    # =========================
     - endpoints: ["r1:eth1", "r2:eth1"]
     - endpoints: ["r2:eth2", "r4:eth1"]
     - endpoints: ["r4:eth2", "r3:eth1"]
@@ -64,5 +73,12 @@ topology:
     - endpoints: ["r1:eth3", "r4:eth3"]
     - endpoints: ["r2:eth3", "r3:eth3"]
 
-    - endpoints: ["shibi:eth1", "r1:eth4"]
-    - endpoints: ["raja:eth1", "r4:eth4"]
+    # =========================
+    # Access Networks
+    # =========================
+
+    # Hosts → R1
+    - endpoints: ["shibi:eth1", "r1:eth4"]      
+
+    # Server → R4
+    - endpoints: ["jani:eth1", "r4:eth4"]
