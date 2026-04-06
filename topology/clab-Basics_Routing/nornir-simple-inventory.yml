@@ -3,29 +3,39 @@ jani:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.17
+    hostname: 172.20.20.19
 r1:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.15
+    hostname: 172.20.20.4
 r2:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.16
+    hostname: 172.20.20.5
 r3:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.19
+    hostname: 172.20.20.7
 r4:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.20
+    hostname: 172.20.20.16
+raja:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.21
 shibi:
     username: 
     password: 
     platform: linux
     hostname: 172.20.20.18
+s1:
+    username: 
+    password: 
+    platform: ovs-bridge
+    hostname: 
